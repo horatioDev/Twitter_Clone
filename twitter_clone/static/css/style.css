@@ -66,7 +66,7 @@ Posts Form
 }
 
 .post_form .name_input {
-    width: 90%;
+    width: 70%;
     background-color: #e6fef7;
     margin-bottom: 10px;
     padding: 10px;
@@ -75,41 +75,34 @@ Posts Form
 }
 
 .post_form .text_body {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     border: none;
+    list-style: none;
 }
 
-.post_form  .submit_buttons {    
+.post_form  .submit_buttons { 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    margin-right: 0;
-    padding-top: 10px;
+    margin-top: 20px;
+    padding: 20px;
     border-top: 1px solid #ccc;
 }
 
 .post_form .submit_buttons .file_button {
-    flex-basis: 75%;
+    flex-basis: 15%;
 }
 
-.post_form .submit_buttons .file_button input{
-    width: 90%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-
-}
 
 .post_form .submit_buttons .tweet_button {
     flex-basis: 25%;
 }
 
 .post_form .submit_buttons .tweet_button input{
-    width: 100%;
     border-radius: 4px;
     background-color: #1da1f2;
     color: #fff;
+    padding: 5px;
+    border: none;
 }
 /* 
 Posts

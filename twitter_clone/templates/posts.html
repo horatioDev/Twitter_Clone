@@ -1,4 +1,3 @@
-
 <!--  Extend base template -->
 {% extends 'base.html' %} {% block content %} {% load static %} {% load cloudinary %}
 <section class="content">
@@ -14,18 +13,18 @@
         <div class="logo">
             <img src="{% static 'img/sample-woman.jpg' %}" alt="User picture">
         </div>
-        <form action="/" method="POST">
+        <form action="/" method="POST" enctype="multipart/form-data">
             <!-- Add a CSRF token to forms -->
             {% csrf_token %}
             <input class="name_input" type="text" name="name" placeholder="Name">
             <textarea class="text_body" name="body" placeholder="What are you doing?" required></textarea>
             <div class="submit_buttons">
                 <div class="file_button">
-                    {% include 'load.html' %}
+                    <input type="file" name="image" id="">
                 </div>
-                 <div class="tweet_button">
+                <div class="tweet_button">
                     <input type="submit" value="Tweet">
-                 </div>
+                </div>
             </div>
         </form>
     </section>
@@ -37,34 +36,37 @@
             <li>
                 <img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %}" alt="">
                 <div class="menu">
-                    <a href="{% url 'edit_post' post.id }">Edit</a>
-                    <a href="delete/{{post.id}}">Delete</a>
+                    <a href="{% url 'edit.html' post.id }">Edit</a>
+                    <a href="delete/{{ post.id }}">Delete</a>
                 </div>
                 <div class="logo">
                     <img src="{% static 'img/sample-woman.jpg' %}">
                 </div>
                 <div class="name_body">
-                    <div class="name">{{post.name}}</div>
-                    <div class="datetime">{{post.created_at}}</div>
-                    <div class="datetime">{{post.updated_at}}</div>
-                    <p>{{post.body}}</p>
+                    <div class="name">{{ post.name }}</div>
+                    <div class="datetime">{{ post.created_at }}</div>
+                    <div class="datetime">{{ post.updated_at }}</div>
+                    <p>{{ post.body }}</p>
                     <div class="post_img_container">
-                        {% include 'index.html' %}
-                        <img src="{{ photo.image.url}}" alt="">
+                        <!-- {% include 'index.html' %} -->
+                       {% if post.image.url %}
+                       <img src="{{ post.image.url }}" alt="">
                     </div>
+                    {% endif %}
                     <div class="likes_container">
                         <div class="like_icon">
-                            <img src="{% static 'img/heart.png' %}">   
+                            <img src="{% static 'img/heart.png' %}">
                             </img>
                         </div>
-                        <div class="like_count">{{post.like_count}}</div>
+                        <div class="like_count">{{ post.like_count}}</div>
                     </div>
                 </div>
             </li>
             {% endfor%}
         </ul>
     </section>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="{% static 'js/posts.js' %}"></script>
 </section>
 {% endblock %}

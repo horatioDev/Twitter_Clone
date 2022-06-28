@@ -1,5 +1,4 @@
 # Import forms 
-from urllib import request
 from django import forms
 
 # Import Photo database
