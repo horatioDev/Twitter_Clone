@@ -1,13 +1,13 @@
 
 <!--  Extend base template -->
-{% extends 'base.html' %} {% block content %} {% load static %} {% load cloudinary %}
+{% extends 'base.html' %} {% block content %} {% load static %}
 <section class="content">
     <header class="post_form_header">
         <div class="header_icon">
             <img src="{% static 'img/techis-logo.png' %}" alt="logo">
         </div>
         <div class="header_text">
-            <h1>Home</h1>
+            <h1>Edit</h1>
         </div>
     </header>
     <section class="post_form">
@@ -21,10 +21,10 @@
             <textarea class="text_body" name="body" placeholder="What are you doing?" required></textarea>
             <div class="submit_buttons">
                 <div class="file_button">
-                    {% include 'load.html' %}
+                    <input type="file" name="upload" id="upload">
                 </div>
                  <div class="tweet_button">
-                    <input type="submit" value="Tweet">
+                    <input type="submit" value="Update">
                  </div>
             </div>
         </form>
@@ -37,7 +37,7 @@
             <li>
                 <img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %}" alt="">
                 <div class="menu">
-                    <a href="{% url 'edit_post' post.id }">Edit</a>
+                    <a href="edit/{{post.id}}">Edit</a>
                     <a href="delete/{{post.id}}">Delete</a>
                 </div>
                 <div class="logo">
@@ -49,15 +49,16 @@
                     <div class="datetime">{{post.updated_at}}</div>
                     <p>{{post.body}}</p>
                     <div class="post_img_container">
-                        {% include 'index.html' %}
-                        <img src="{{ photo.image.url}}" alt="">
+                        <a href="">
+                            <img class="post-img" src="" alt="">
+                        </a>
                     </div>
                     <div class="likes_container">
                         <div class="like_icon">
                             <img src="{% static 'img/heart.png' %}">   
                             </img>
                         </div>
-                        <div class="like_count">{{post.like_count}}</div>
+                        <div class="like_count">0</div>
                     </div>
                 </div>
             </li>
@@ -66,5 +67,3 @@
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="{% static 'js/posts.js' %}"></script>
-</section>
-{% endblock %}

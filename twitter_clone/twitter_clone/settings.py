@@ -125,6 +125,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
+
 # Global config for cloudinary
 cloudinary.config( 
   cloud_name = "rayxavier", 

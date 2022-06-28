@@ -9,7 +9,7 @@ from django.http import HttpResponse
 def index(request):
     # Get all posts; limit: 20
     posts = Post.objects.all()[:20]
-    return render(request, 'posts.html')
+    return render(request, 'posts.html', {'posts':posts})
 
 def edit(render):
     return HttpResponse('Edit')

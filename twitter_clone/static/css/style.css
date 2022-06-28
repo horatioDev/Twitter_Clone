@@ -1,0 +1,211 @@
+/* 
+Common
+********************************* */
+*{
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100vh;
+}
+
+.content {
+    max-width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.content form {
+    width: 100%;
+}
+
+.logo img {
+    border-radius: 50%;
+}
+
+
+/* 
+Post Form - Header
+********************************* */
+.content .post_form_header {
+    display: flex;
+    align-items: center;  
+    width: 100%;  
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+}
+
+.post_form_header .header_icon {
+    flex-basis: 15%;
+}
+
+.post_form_header .header_icon img {
+    width: 65%;
+}
+
+.content .post_form_header .header_text {
+    margin: 0;
+}
+
+/* 
+Posts Form
+********************************* */
+.content .post_form {
+    display: flex;
+    padding: 20px;
+    border-bottom: 4px solid #ccc;
+}
+
+.post_form .logo {
+    flex-basis: 15%;
+}
+
+.post_form .logo img {
+    width: 60%;
+}
+
+.post_form .name_input {
+    width: 90%;
+    background-color: #e6fef7;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.post_form .text_body {
+    width: 100%;
+    padding: 10px;
+    border: none;
+}
+
+.post_form  .submit_buttons {    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 0;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.post_form .submit_buttons .file_button {
+    flex-basis: 75%;
+}
+
+.post_form .submit_buttons .file_button input{
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+.post_form .submit_buttons .tweet_button {
+    flex-basis: 25%;
+}
+
+.post_form .submit_buttons .tweet_button input{
+    width: 100%;
+    border-radius: 4px;
+    background-color: #1da1f2;
+    color: #fff;
+}
+/* 
+Posts
+********************************* */
+
+.posts ul {
+    padding: 0;
+}
+
+.posts li {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 16px;
+    position: relative;
+}
+
+.posts li .logo {
+    flex-basis: 15%; 
+}
+
+.posts li .logo  img {
+    width: 60%;
+}
+
+.posts li .menu_icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+}
+
+.posts li .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 32px;
+    right: 12px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.posts li .menu a {
+    text-decoration: none;
+}
+
+.posts li .name_body {
+    flex-basis: 85%;
+}
+
+.posts li .name_body .name {
+    font-weight: bold;
+}
+
+.posts li .name_body .datetime {
+    color: gray;
+    font-size: 12px;
+}
+
+/* Post img container and likes */
+.post_img_container {
+    width: 300px;
+    border-radius: 4px;
+    border: 1px dashed red;
+}
+
+.post_img_container img {
+    width: 100%;
+}
+.likes_container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.likes_container .like_icon {
+    flex-basis: 5%;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.likes_container .like_icon img {
+    width: 100%;
+    margin: auto;
+}
+.likes_container .like_count {
+    margin-left: 10px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 500px) {
+    .posts li .name_body .name {
+        font-size: 20px;
+    }
+}
