@@ -36,23 +36,29 @@
             <li>
                 <img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %}" alt="">
                 <div class="menu">
-                    <a href="{% url 'edit.html' post.id }">Edit</a>
+                    <a href="{% url 'tweets:edit.html' post.id }">Edit</a>
                     <a href="delete/{{ post.id }}">Delete</a>
                 </div>
                 <div class="logo">
                     <img src="{% static 'img/sample-woman.jpg' %}">
                 </div>
                 <div class="name_body">
+
                     <div class="name">{{ post.name }}</div>
+
                     <div class="datetime">{{ post.created_at }}</div>
+
                     <div class="datetime">{{ post.updated_at }}</div>
+                    
                     <p>{{ post.body }}</p>
+
                     <div class="post_img_container">
                         <!-- {% include 'index.html' %} -->
                        {% if post.image.url %}
-                       <img src="{{ post.image.url }}" alt="">
+                        <img src="{{ post.image.url }}" alt="">
+                       {% endif %}
                     </div>
-                    {% endif %}
+                    
                     <div class="likes_container">
                         <div class="like_icon">
                             <img src="{% static 'img/heart.png' %}">

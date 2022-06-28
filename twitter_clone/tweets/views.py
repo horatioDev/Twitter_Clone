@@ -22,8 +22,9 @@ def index(request):
     return render(request, 'posts.html', {'posts':posts})
 
 def edit(request, post_id):
-    post = Post.objects.get(id = post_id)
-    return HttpResponse(res)
+    post = Post.objects.get(id = post_id)    
+    context = {'post':post}
+    return HttpResponseRedirect(request,'edit.html', context)
 
 
 # Define delete function
@@ -31,4 +32,5 @@ def delete(request, post_id):
     # Find user post
     post = Post.objects.get(id = post_id)
     # Delete user post
-    return HttpResponse(out)
+    post.delete()
+    return HttpResponseRedirect('/')

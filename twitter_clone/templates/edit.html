@@ -10,19 +10,30 @@
     </header>
     <section class="post_form">
         <div class="logo">
-            <img src="{% static 'img/sample-woman.jpg' %}" alt="User picture">
+            <img src="{% static 'img/sample-woman.jpg' %}" >
         </div>
         <form action="/" method="POST" enctype="multipart/form-data">
             <!-- Add a CSRF token to forms -->
             {% csrf_token %}
-            <input class="name_input" type="text" name="name" placeholder="Name" value="{ post.name }">
-            <textarea class="text_body" name="body" placeholder="What are you doing?" required value="{ post.body }"></textarea>
+            <input class="name_input" type="text" name="name" placeholder="Name" value="{{ post.name }}">
+            <textarea class="text_body" name="body" placeholder="What are you doing?" required value="{{ post.body}}"></textarea>
+
+            <div class="post_img_container">
+                <!-- {% include 'index.html' %} -->
+               {% if post.image.url %}
+                <img src="{{ post.image.url }}" >
+               {% endif %}
+            </div>
+            
             <div class="submit_buttons">
                 <div class="file_button">
-                    <input type="file" name="image" id="">
+                    <input type="file" name="image" id="" >
+                </div>
+                <div class="cancel_button">
+                    <input type="submit">
                 </div>
                 <div class="tweet_button">
-                    <input type="submit" value="Tweet">
+                    <input type="submit" value="Update">
                 </div>
             </div>
         </form>
