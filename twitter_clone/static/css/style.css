@@ -167,7 +167,8 @@ Posts
 
 /* Post img container and likes */
 .post_img_container {
-    width: 300px;
+    width: 400px;
+    height: 300px;
     border-radius: 4px;
     border: 1px dashed red;
 }

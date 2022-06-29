@@ -10,3 +10,10 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = '__all__'
+
+
+# Create a edit PostForm class
+class EditPostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = '__all__'

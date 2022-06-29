@@ -36,11 +36,11 @@
             <li>
                 <img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %}" alt="">
                 <div class="menu">
-                    <a href="{% url 'tweets:edit.html' post.id }">Edit</a>
+                    <a href="edit/{{ post.id }}">Edit</a>
                     <a href="delete/{{ post.id }}">Delete</a>
                 </div>
                 <div class="logo">
-                    <img src="{% static 'img/sample-woman.jpg' %}">
+                    <img src="{% static 'img/sample-woman.jpg' %}" alt="user photo">
                 </div>
                 <div class="name_body">
 
@@ -49,7 +49,7 @@
                     <div class="datetime">{{ post.created_at }}</div>
 
                     <div class="datetime">{{ post.updated_at }}</div>
-                    
+
                     <p>{{ post.body }}</p>
 
                     <div class="post_img_container">

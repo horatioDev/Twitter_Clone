@@ -12,7 +12,7 @@
         <div class="logo">
             <img src="{% static 'img/sample-woman.jpg' %}" >
         </div>
-        <form action="/" method="POST" enctype="multipart/form-data">
+        <form action="/edit/" method="POST" enctype="multipart/form-data">
             <!-- Add a CSRF token to forms -->
             {% csrf_token %}
             <input class="name_input" type="text" name="name" placeholder="Name" value="{{ post.name }}">
@@ -38,3 +38,4 @@
             </div>
         </form>
     </section>
+    {% endblock %}
