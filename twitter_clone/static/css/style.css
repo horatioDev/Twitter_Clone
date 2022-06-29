@@ -64,7 +64,8 @@ Posts Form
 }
 
 .post_form .logo img {
-    width: 60%;
+    width: 50px;
+    height: 50px;
 }
 
 .post_form .name_input {
@@ -177,9 +178,10 @@ Post img container and likes
 ********************************* */
 
 .post_img_container {
-    width: 400px;
+    width: 350px;
     border-radius: 4px;
     border: 1px dashed red;
+    margin: auto;
 }
 
 .post_img_container img {
@@ -220,28 +222,34 @@ Edit Page Buttons
 
 .post_form .edit_buttons .file_button {
     flex-basis: 60%;
+    display: flex;
+    justify-content: start;
+    
+}
+
+.post_form .edit_buttons .file_button input {
+    margin: auto
+    ;
 }
 
 .post_form .edit_buttons .update_button {
     flex-basis: 20%;
-}
-
-.post_form .edit_buttons .update_button {
-    flex-basis: 20%;
+    display: flex;
+    padding: 0;
 }
 
 .post_form .edit_buttons .update_button .update_link{
     border-radius: 4px;
     background-color: #1da1f2;
-    text-decoration: none;
     color: #fff;
-    padding: 4px;
-    margin: 0;
+    padding: 5px;
+    margin: auto;
     border: none;
 }
 
 .post_form .edit_buttons .cancel_button {
-    flex-basis: 15%;
+    flex-basis: 20%;
+    display: flex;
 }
 
 .post_form .edit_buttons .cancel_button .cancel_link{
@@ -249,8 +257,8 @@ Edit Page Buttons
     background-color: gray;
     text-decoration: none;
     color: #fff;
+    margin: auto;
     padding: 4px;
-    margin-right: 5px;
     border: none;
 }
 
