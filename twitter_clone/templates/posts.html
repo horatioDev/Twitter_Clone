@@ -64,7 +64,11 @@
                             <img src="{% static 'img/heart.png' %}">
                             </img>
                         </div>
-                        <div class="like_count">{{ post.like_count}}</div>
+                        <div class="like_count">
+                            {%for like in total_likes %}
+                                {{ post.like_count}}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </li>

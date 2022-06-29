@@ -31,11 +31,31 @@ def edit(request, post_id):
         else:
             return HttpResponseRedirect(form.errors.as_json())
 
-    # Get all posts; limit: 20
+    # Get user post
     post = Post.objects.get(id = post_id)    
     context = {'post':post}
     return render(request, 'edit.html', context)
 
+# Define a like function
+def like(request, post_id):
+    likes = Post.objects.get('like_count')
+    
+
+# Define update function
+def update(request, post_id):
+    if request.method == 'POST':
+        form = EditPostForm(request.POST, post_id)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/')
+        else:
+            return HttpResponseRedirect(form.errors.as_json())
+
+    # Get user post
+    post = EditPostForm(request.POST, post_id)
+    post.save()    
+    context = {'post':post}
+    return render(request, 'posts.html', context)
 
 # Define delete function
 def delete(request, post_id):

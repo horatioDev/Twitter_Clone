@@ -4,6 +4,7 @@ Common
 *{
     box-sizing: border-box;
 }
+
 html,
 body {
     height: 100vh;
@@ -11,7 +12,7 @@ body {
 
 .content {
     max-width: 600px;
-    height: 100%;
+    height: 100vh;
     margin: 0 auto;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
@@ -51,6 +52,7 @@ Post Form - Header
 /* 
 Posts Form
 ********************************* */
+
 .content .post_form {
     display: flex;
     padding: 20px;
@@ -83,8 +85,9 @@ Posts Form
 
 .post_form  .submit_buttons { 
     display: flex;
+    width: 80%;
     margin-top: 20px;
-    padding: 20px;
+    padding-top: 20px;
     border-top: 1px solid #ccc;
 }
 
@@ -101,9 +104,12 @@ Posts Form
     border-radius: 4px;
     background-color: #1da1f2;
     color: #fff;
-    padding: 5px;
+    padding: 4px;
+    margin: 0;
     border: none;
 }
+
+
 /* 
 Posts
 ********************************* */
@@ -165,16 +171,21 @@ Posts
     font-size: 12px;
 }
 
-/* Post img container and likes */
+
+/* 
+Post img container and likes
+********************************* */
+
 .post_img_container {
     width: 400px;
-    height: 300px;
+    height: 200px;
     border-radius: 4px;
     border: 1px dashed red;
 }
 
 .post_img_container img {
     width: 100%;
+    height: 100%;
 }
 .likes_container {
     display: flex;
@@ -196,10 +207,62 @@ Posts
     margin-left: 10px;
 }
 
-/* Media Queries */
+
+/* 
+Edit Page Buttons
+********************************* */
+
+.post_form  .edit_buttons { 
+    display: flex;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.post_form .edit_buttons .file_button {
+    flex-basis: 60%;
+}
+
+.post_form .edit_buttons .update_button {
+    flex-basis: 20%;
+}
+
+.post_form .edit_buttons .update_button {
+    flex-basis: 20%;
+}
+
+.post_form .edit_buttons .update_button .update_link{
+    border-radius: 4px;
+    background-color: #1da1f2;
+    text-decoration: none;
+    color: #fff;
+    padding: 4px;
+    margin: 0;
+    border: none;
+}
+
+.post_form .edit_buttons .cancel_button {
+    flex-basis: 15%;
+}
+
+.post_form .edit_buttons .cancel_button .cancel_link{
+    border-radius: 4px;
+    background-color: gray;
+    text-decoration: none;
+    color: #fff;
+    padding: 4px;
+    margin-right: 5px;
+    border: none;
+}
+
+
+/* 
+Media Queries
+********************************* */
 
 @media screen and (max-width: 500px) {
     .posts li .name_body .name {
         font-size: 20px;
     }
+
 }

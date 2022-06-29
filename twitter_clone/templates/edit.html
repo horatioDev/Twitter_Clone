@@ -16,7 +16,7 @@
             <!-- Add a CSRF token to forms -->
             {% csrf_token %}
             <input class="name_input" type="text" name="name" placeholder="Name" value="{{ post.name }}">
-            <textarea class="text_body" name="body" placeholder="What are you doing?" required value="{{ post.body}}"></textarea>
+            <textarea class="text_body" name="body" placeholder="What are you doing?" required value="{{ post.body }}"></textarea>
 
             <div class="post_img_container">
                 <!-- {% include 'index.html' %} -->
@@ -25,15 +25,15 @@
                {% endif %}
             </div>
             
-            <div class="submit_buttons">
+            <div class="edit_buttons">
                 <div class="file_button">
                     <input type="file" name="image" id="" >
                 </div>
                 <div class="cancel_button">
-                    <input type="submit">
+                    <a class="cancel_link" href="{% url 'index' %}">Cancel</a>
                 </div>
-                <div class="tweet_button">
-                    <input type="submit" value="Update">
+                <div class="update_button">
+                    <a class="update_link" href="{% url 'index' %}">Update</a>
                 </div>
             </div>
         </form>
