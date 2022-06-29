@@ -10,13 +10,13 @@
     </header>
     <section class="post_form">
         <div class="logo">
-            <img src="{% static 'img/sample-woman.jpg' %}" >
-        </div>
-        <form action="/edit/" method="POST" enctype="multipart/form-data">
+            <img src="{% static 'img/sample-woman.jpg' %}" alt="User picture">
+        </div>        
+        <form action="/edit/{{post.id}}" method="post" enctype="multipart/form-data">
             <!-- Add a CSRF token to forms -->
             {% csrf_token %}
             <input class="name_input" type="text" name="name" placeholder="Name" value="{{ post.name }}">
-            <textarea class="text_body" name="body" placeholder="What are you doing?" required value="{{ post.body }}"></textarea>
+            <textarea class="text_body" name="body" placeholder="{{ post.body }}" required ></textarea>
 
             <div class="post_img_container">
                 <!-- {% include 'index.html' %} -->
@@ -27,13 +27,14 @@
             
             <div class="edit_buttons">
                 <div class="file_button">
-                    <input type="file" name="image" id="" >
+                    <input type="file" name="image" id="files1" >
                 </div>
                 <div class="cancel_button">
                     <a class="cancel_link" href="{% url 'index' %}">Cancel</a>
                 </div>
                 <div class="update_button">
-                    <a class="update_link" href="{% url 'index' %}">Update</a>
+                    <!-- #<a class="update_link" href="{% url 'index' %}">Update</a> -->
+                    <input type="submit" value="update" class="update_link">
                 </div>
             </div>
         </form>

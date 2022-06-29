@@ -61,12 +61,12 @@
                     
                     <div class="likes_container">
                         <div class="like_icon">
-                            <img src="{% static 'img/heart.png' %}">
-                            </img>
+                            <a href="{{post.like_count}}"><img src="{% static 'img/heart.png' %}">
+                            </img></a>
                         </div>
                         <div class="like_count">
-                            {%for like in total_likes %}
-                                {{ post.like_count}}
+                            {%for like in likes %}
+                                <p>{{ post.like_count}}</p>
                             {% endfor %}
                         </div>
                     </div>
