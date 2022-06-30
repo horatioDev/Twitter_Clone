@@ -10,7 +10,7 @@
     </header>
     <section class="post_form">
         <div class="logo">
-            <img src="{% static 'img/my-pic.jpg' %}" alt="User picture">
+            <img src="{% static 'img/sample-woman.jpg' %}" alt="User picture">
         </div>
         <form action="/edit/{{post.id}}" method="post" enctype="multipart/form-data">
             <!-- Add a CSRF token to forms -->
@@ -33,7 +33,6 @@
                     <a class="cancel_link" href="{% url 'index' %}">Cancel</a>
                 </div>
                 <div class="update_button">
-                    <!-- #<a class="update_link" href="{% url 'index' %}">Update</a> -->
                     <input type="submit" value="Update" class="update_link">
                 </div>
             </div>
