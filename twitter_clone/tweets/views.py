@@ -38,7 +38,6 @@ def edit(request, post_id):
             return HttpResponseRedirect('/')
         else:
             return HttpResponse("Not Valid")
-            # return HttpResponseRedirect(form.errors.as_json())
     # Display user edited post
     return render(request, 'edit.html', {'post':post})
 
