@@ -11,23 +11,23 @@
     <section class="post_form">
         <div class="logo">
             <img src="{% static 'img/my-pic.jpg' %}" alt="User picture">
-        </div>        
+        </div>
         <form action="/edit/{{post.id}}" method="post" enctype="multipart/form-data">
             <!-- Add a CSRF token to forms -->
             {% csrf_token %}
             <input class="name_input" type="text" name="name" placeholder="Name" value="{{ post.name }}">
-            <textarea class="text_body" name="body" placeholder="{{ post.body }}" required ></textarea>
+            <textarea class="text_body" name="body" placeholder="{{ post.body }}" required></textarea>
 
             <div class="post_img_container">
                 <!-- {% include 'index.html' %} -->
-               {% if post.image.url %}
-                <img src="{{ post.image.url }}" >
-               {% endif %}
+                {% if post.image.url %}
+                <img src="{{ post.image.url }}">
+                {% endif %}
             </div>
-            
+
             <div class="edit_buttons">
                 <div class="file_button">
-                    <input type="file" name="image" id="files1" >
+                    <input type="file" name="image" id="files1">
                 </div>
                 <div class="cancel_button">
                     <a class="cancel_link" href="{% url 'index' %}">Cancel</a>

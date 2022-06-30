@@ -47,7 +47,8 @@ def like(request, post_id):
     # Create a post instance to hold data:
     likes = Post.objects.get(id=post_id)
     # Increment likes:
-    likes += 1
+    likes.like_count += 1
+    
     # Save likes:
     likes.save()
     # Redirect to same/current page:

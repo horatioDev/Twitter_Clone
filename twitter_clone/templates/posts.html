@@ -36,11 +36,15 @@
             <li>
                 <img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %}" alt="">
                 <div class="menu">
-                    <a href="edit/{{ post.id }}">Edit</a>
-                    <a href="delete/{{ post.id }}">Delete</a>
+                    <div class="edit_link">
+                        <a href="edit/{{ post.id }}">Edit</a>
+                    </div>
+                    <div class="delete_link">
+                        <a href="delete/{{ post.id }}">Delete</a>
+                    </div>
                 </div>
                 <div class="logo">
-                    <img src="{% static 'img/sample-woman.jpg' %}" alt="user photo">
+                    <img src="{% static 'img/my-pic.jpg' %}" alt="user photo">
                 </div>
                 <div class="name_body">
 
@@ -61,14 +65,10 @@
                     
                     <div class="likes_container">
                         <div class="like_icon">
-                            <a href="{{post.like_count}}"><img src="{% static 'img/heart.png' %}">
+                            <a href="like/{{post.id}}"><img src="{% static 'img/heart.png' %}">
                             </img></a>
                         </div>
-                        <div class="like_count">
-                            {%for like in likes %}
-                                <p>{{ post.like_count}}</p>
-                            {% endfor %}
-                        </div>
+                        <div class="like_count">{{post.like_count}}</div>
                     </div>
                 </div>
             </li>
