@@ -91,13 +91,14 @@ Posts Form
     border-top: 1px solid #ccc;
 }
 
-.post_form .submit_buttons .file_button {
-    flex-basis: 15%;
+.post_form .submit_buttons .file_button input {
+    width: 100%;
 }
 
 
 .post_form .submit_buttons .tweet_button {
     flex-basis: 25%;
+    text-align: right;
 }
 
 .post_form .submit_buttons .tweet_button input{
