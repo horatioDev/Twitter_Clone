@@ -7,7 +7,7 @@ This project was built by me using Django. It will be added to my portfolio show
 [Live Heroku Deployment](https://twitter-clone-horatio.herokuapp.com/)
 
 
-![twitter_clone](https://user-images.githubusercontent.com/78431899/176809879-ed3fcc46-3d03-4a42-b070-73b01866f38a.png)
+![twitter_clone](![twitter_clone_update](https://user-images.githubusercontent.com/78431899/184260814-6c002e9a-a583-4d20-975f-28eea271f220.png))
 
 
 
