@@ -90,16 +90,16 @@ DATABASES = {
     }
 }
 
-DATABASES = {
-    'default': {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "d8073ugo1tn73c",
-        "USER": "iivomibhbivdhe",
-        "HOST": "ec2-34-239-241-121.compute-1.amazonaws.com",
-        "PORT": 5432,
-        "PASSWORD": "a4fb3d37275883c3708c205d8cd290087b7cf0e96332b2f07463b40e711032d5",
-    }
-}
+# DATABASES = {
+#     'default': {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "d8073ugo1tn73c",
+#         "USER": "iivomibhbivdhe",
+#         "HOST": "ec2-34-239-241-121.compute-1.amazonaws.com",
+#         "PORT": 5432,
+#         "PASSWORD": "a4fb3d37275883c3708c205d8cd290087b7cf0e96332b2f07463b40e711032d5",
+#     }
+# }
 
 
 
@@ -127,7 +127,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 
