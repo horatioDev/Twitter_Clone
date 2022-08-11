@@ -217,15 +217,14 @@ Edit Page Buttons
 }
 
 .post_form .edit_buttons .file_button {
-    flex-basis: 60%;
     display: flex;
     justify-content: start;
     
 }
 
 .post_form .edit_buttons .file_button input {
-    margin: auto
-    ;
+    width: 100%;
+    /* margin: auto; */
 }
 
 .post_form .edit_buttons .update_button {
